@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import UseReduce from "./Hook/UseReduce";
+import UseCallBack from "./Hook/UseCallBack";
+import UseMemo from "./Hook/UseMemo";
+import UseRef from "./Hook/UseRef";
+import NavBar from "./component/NavBar";
+import UserDetail from "./component/UserDetail";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./component/Home";
+import AllHook from "./Hook/AllHook";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+      <NavBar />
+        <Routes>
+         
+          <Route path="/" element={<Home />} />
+          <Route path="/useredue" element={<UseReduce />} />
+          <Route path="/usecallback" element={<UseCallBack />} />
+          <Route path="/usememo" element={<UseMemo />} />
+          <Route path="/useref" element={<UseRef />} />
+          <Route path="/detail" element={<UserDetail />} />
+          <Route path="/hook" element={<AllHook />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
