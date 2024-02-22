@@ -8,6 +8,7 @@ import UserDetail from "./component/UserDetail";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./component/Home";
 import AllHook from "./Hook/AllHook";
+import UserForm from "./Form/UserForm";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/useref" element={<UseRef />} />
           <Route path="/detail" element={<UserDetail />} />
           <Route path="/hook" element={<AllHook />} />
+          <Route path="/form" element={<UserForm />} />
         </Routes>
       </Router>
     </>

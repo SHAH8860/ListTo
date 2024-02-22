@@ -37,6 +37,11 @@ function NavBar() {
                   Rtk
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/form">
+                 Form
+                </Link>
+              </li>
             </ul>
             <form className="d-flex">
               <input
